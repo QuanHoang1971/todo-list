@@ -77,6 +77,7 @@ window.addEventListener("load", function () {
       // textContent chỉ lấy ra
       const index = todos.findIndex((item) => item === todoText);
       todos.splice(index, 1);
+      // xóa item ở vị trí 1
       localStorage.setItem("todoList", JSON.stringify(todos));
       // set lại 1 mảng mới khi xóa item thì nó sẽ ko lưu trong localStorage
     }
