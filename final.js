@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
 
   if (Array.isArray(todos) && todos.length > 0) {
     [...todos].forEach((item) => createTodoItem(item));
-    // sau khi lấy đc item ở trên chỗ todos thì ktra todos có phải là 1 array ko
+    // sau khi lấy đc item ở trên chỗ todos thì ktra todos có phải là 1 array ko và độ dài phải > 0
     // forEach để duyệt các item trong todos
   }
   // khi load lại thì vẫn giữ đc các item vì item đc lưu trong local Storage
@@ -28,8 +28,10 @@ window.addEventListener("load", function () {
     <i class="fa fa-trash todo-remove"></i>
   </div>`;
     // sau khi lấy đc giá trị thì in nó vào todoList
-    // sau này muốn truyền vào todo-list
+    // sau này muốn truyền vào todo-list bên HTML
     todoList.insertAdjacentHTML("beforeend", template);
+    // element.insertAdjacentHTML(position, text);
+    //beforeend nằm phía trong, đằng sau node con cuối cùng, là class  todo-list
     // chèn các node vào các vị trí xác định,
     // vị trí này được chỉ định bởi tham số của hàm.
     // trước khi đóng thẻ nên mỗi lần thêm việc todo nó sẽ nằm sau,
@@ -38,6 +40,7 @@ window.addEventListener("load", function () {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    // khi submit , chặn việc trang sẽ bị load lại
     const todoVal = this.elements["todo"].value;
     // khi submit vào sẽ lấy ra đc giá trị value, bây h làm tnao để đưa ra bên ngoài đc
     if (!todoVal) return;
