@@ -96,8 +96,6 @@ body {
 }
 .todo-remove {
   flex-shrink: 0;
-  /* flex-shrink sẽ được sử dụng khi tổng kích thước các item trong container lớn hơn kích thước của container và 
-  muốn co kích thước của item lại theo tỉ lệ mong muốn. */
   width: 40px;
   height: 40px;
   background-color: #fc5776;

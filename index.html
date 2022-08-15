@@ -15,13 +15,14 @@
       integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
       crossorigin="anonymous"
     />
+    <!-- biểu tượng trash bin -->
     <link rel="stylesheet" href="./app.css" />
   </head>
   <body>
     <div class="todo">
       <form class="todo-form" autocomplete="off">
         <!-- khi nhập giá trị vào form nó sẽ lưu lại
-        để autocomplete nó sẽ tự xóa lịch sử   -->
+        để autocomplete mặc định là on -> off để nó sẽ tự xóa lịch sử   -->
         <input
           type="text"
           name="todo"
@@ -30,12 +31,7 @@
         />
         <button class="todo-submit" type="submit">Add</button>
       </form>
-      <div class="todo-list">
-        <!-- <div class="todo-item">
-          <span class="todo-text">Learning english</span>
-          <i class="fa fa-trash todo-remove" data-value="Learning english"></i>
-        </div> -->
-      </div>
+      <div class="todo-list"></div>
     </div>
     <script src="./final.js"></script>
   </body>
